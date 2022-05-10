@@ -85,23 +85,22 @@ const Header = () => {
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal p-0">
             <li>
-              <a>Home</a>
-            </li>
-
-            <li>
-              <a>Appointment</a>
+              <Link to="/home">Home</Link>
             </li>
             <li>
-              <a>Review</a>
+              <Link to="/appointment">Appointment</Link>
             </li>
             <li>
-              <a>Contacts</a>
+              <Link to="/review">Review</Link>
             </li>
             <li>
-              <a>About </a>
+              <Link to="/contact">Contact</Link>
             </li>
             <li>
-              <a>Login</a>
+              <Link to="/about">About</Link>
+            </li>{" "}
+            <li>
+              <Link to="/login">Login</Link>
             </li>
           </ul>
         </div>

@@ -2,6 +2,7 @@ import React from "react";
 import auth from "../../Firebase/Firebaseinit";
 import { useForm } from "react-hook-form";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 
 const Login = () => {
   const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
@@ -12,10 +13,26 @@ const Login = () => {
     handleSubmit,
   } = useForm();
 
+  let signInErrorMessage;
+
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+  if (loading || loading1) {
+    return <button class="btn loading">loading</button>;
+  }
+  if ((error, error1)) {
+    signInErrorMessage = (
+      <p className="text-red-500">{error?.message || error1?.message}</p>
+    );
+  }
+
   if (user1) {
     console.log(user1);
   }
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+    signInWithEmailAndPassword(data.email, data.password);
+  };
 
   return (
     <div className="flex h-screen justify-center items-center">
@@ -90,7 +107,7 @@ const Login = () => {
                 )}
               </label>
             </div>
-
+            {signInErrorMessage}
             <input className="btn w-full max-w-xs" type="submit" />
           </form>
 

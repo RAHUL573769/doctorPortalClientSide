@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Services from "../Home/Services";
+import BookingModal from "./BookingModal";
 
-const Service = ({ service }) => {
+const Service = ({ service, srtTreatment }) => {
   const { name, slots } = service;
 
   return (
@@ -22,9 +23,14 @@ const Service = ({ service }) => {
           </p>
           <p>{slots}</p>
           <div class="card-actions justify-end">
-            <button disabled={slots.length === 0} class="btn btn-secondary ">
-              Book Appointment
-            </button>
+            <label
+              for="booking-modal"
+              class="btn modal-button "
+              onClick={() => srtTreatment(service)}
+              disabled={slots.length === 0}
+            >
+              open modal
+            </label>
           </div>
         </div>
       </div>

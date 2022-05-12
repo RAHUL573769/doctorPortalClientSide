@@ -7,9 +7,9 @@ const Service = ({ service, srtTreatment }) => {
 
   return (
     <div>
-      <div class="card w-96 bg-base-100 shadow-xl">
-        <div class="card-body">
-          <h2 class="card-title text-secondary">{name}</h2>
+      <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card-body">
+          <h2 className="card-title text-secondary">{name}</h2>
           <p>
             {slots.length > 0 ? (
               <span>{slots[0]}</span>
@@ -22,10 +22,10 @@ const Service = ({ service, srtTreatment }) => {
             {slots.length > 1 ? "spaces" : "space"}{" "}
           </p>
           <p>{slots}</p>
-          <div class="card-actions justify-end">
+          <div className="card-actions justify-end">
             <label
               for="booking-modal"
-              class="btn modal-button "
+              className="btn modal-button "
               onClick={() => srtTreatment(service)}
               disabled={slots.length === 0}
             >

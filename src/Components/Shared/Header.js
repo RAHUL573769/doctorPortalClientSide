@@ -27,13 +27,13 @@ const Header = () => {
 
   return (
     <div>
-      <div class="navbar bg-base-100">
-        <div class="navbar-start">
-          <div class="dropdown">
-            <label tabindex="0" class="btn btn-ghost lg:hidden">
+      <div className="navbar bg-base-100">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <label tabindex="0" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
+                className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -48,16 +48,16 @@ const Header = () => {
             </label>
             <ul
               tabindex="0"
-              class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
                 <a>Item 1</a>
               </li>
               <li tabindex="0">
-                <a class="justify-between">
+                <a className="justify-between">
                   Parent
                   <svg
-                    class="fill-current"
+                    className="fill-current"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -66,7 +66,7 @@ const Header = () => {
                     <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
                   </svg>
                 </a>
-                <ul class="p-2">
+                <ul className="p-2">
                   <li>
                     <a>Submenu 1</a>
                   </li>
@@ -80,10 +80,10 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <a class="btn btn-ghost normal-case text-xl">Doctors's Portal</a>
+          <a className="btn btn-ghost normal-case text-xl">Doctors's Portal</a>
         </div>
-        <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal p-0">
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal p-0">
             <li>
               <Link to="/home">Home</Link>
             </li>
@@ -104,8 +104,8 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div class="navbar-end">
-          <a class="btn">Get started</a>
+        <div className="navbar-end">
+          <a className="btn">Get started</a>
         </div>
       </div>
     </div>

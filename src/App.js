@@ -4,6 +4,7 @@ import Appointmenr from "./Components/Appointment/Appointmenr";
 import Contact from "./Components/Contact/Contact";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
+import Register from "./Components/Register/Register";
 import Review from "./Components/Review/Review";
 import Header from "./Components/Shared/Header";
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/review" element={<Review></Review>}></Route>
         <Route path="/contact" element={<Contact></Contact>}></Route>
+        <Route path="/register" element={<Register></Register>}></Route>
         <Route
           path="/appointment"
           element={<Appointmenr></Appointmenr>}
